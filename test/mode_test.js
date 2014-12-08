@@ -86,7 +86,7 @@
     var diff = highlightOutputsDifferent(expectedOutput, observedOutput);
     if (diff != null) {
       s += '<div class="mt-test mt-fail">';
-      s +=   '<pre>' + esc(text) + '</pre>';
+      s +=   '<pre><code>' + esc(text) + '</code></pre>';
       s +=   '<div class="cm-s-default">';
       s += 'expected:';
       s +=   prettyPrintOutputTable(expectedOutput, diff);
@@ -183,7 +183,7 @@
     if(output[0].state) {
       s += '</tr><tr class="mt-state-row" title="State AFTER each token">';
       for (var i = 0; i < output.length; ++i) {
-        s += '<td class="mt-state"><pre>' + esc(output[i].state) + '</pre></td>';
+        s += '<td class="mt-state"><pre><code>' + esc(output[i].state) + '</code></pre></td>';
       }
     }
     s += '</tr></table>';

@@ -95,7 +95,7 @@
 
     <pre data-lang="text/html">&lt;script src="lib/codemirror.js">&lt;/script>
 &lt;link rel="stylesheet" href="../lib/codemirror.css">
-&lt;script src="mode/javascript/javascript.js">&lt;/script></pre>
+&lt;script src="mode/javascript/javascript.js">&lt;/script></code></pre>
 
     <p>(Alternatively, use a module loader. <a href="#modloader">More
     about that later.</a>)</p>
@@ -103,7 +103,7 @@
     <p>Having done this, an editor instance can be created like
     this:</p>
 
-    <pre data-lang="javascript">var myCodeMirror = CodeMirror(document.body);</pre>
+    <pre data-lang="javascript"><code>var myCodeMirror = CodeMirror(document.body);</code></pre>
 
     <p>The editor will be appended to the document body, will start
     empty, and will use the mode that we loaded. To have more control
@@ -111,10 +111,10 @@
     to <a href="#CodeMirror"><code>CodeMirror</code></a> as a second
     argument:</p>
 
-    <pre data-lang="javascript">var myCodeMirror = CodeMirror(document.body, {
+    <pre data-lang="javascript"><code>var myCodeMirror = CodeMirror(document.body, {
   value: "function myScript(){return 100;}\n",
   mode:  "javascript"
-});</pre>
+});</code></pre>
 
     <p>This will initialize the editor with a piece of code already in
     it, and explicitly tell it to use the JavaScript mode (which is
@@ -131,13 +131,13 @@
 
     <pre data-lang="javascript">var myCodeMirror = CodeMirror(function(elt) {
   myTextArea.parentNode.replaceChild(elt, myTextArea);
-}, {value: myTextArea.value});</pre>
+}, {value: myTextArea.value});</code></pre>
 
     <p>However, for this use case, which is a common way to use
     CodeMirror, the library provides a much more powerful
     shortcut:</p>
 
-    <pre data-lang="javascript">var myCodeMirror = CodeMirror.fromTextArea(myTextArea);</pre>
+    <pre data-lang="javascript">var myCodeMirror = CodeMirror.fromTextArea(myTextArea);</code></pre>
 
     <p>This will, among other things, ensure that the textarea's value
     is updated with the editor's contents when the form (if it is part
@@ -172,7 +172,7 @@
     lineNumbers: true,
     mode: "htmlmixed"
   });
-});</pre>
+});</code></pre>
 
     <p>It will automatically load the modes that the mixed HTML mode
     depends on (XML, JavaScript, and CSS).</p>
@@ -730,7 +730,7 @@ editor.setOption("extraKeys", {
     var spaces = Array(cm.getOption("indentUnit") + 1).join(" ");
     cm.replaceSelection(spaces);
   }
-});</pre>
+});</code></pre>
 
     <p>Alternatively, a character can be specified directly by
     surrounding it in single quotes, for example <code>'$'</code>

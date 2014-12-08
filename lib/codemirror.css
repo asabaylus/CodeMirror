@@ -14,7 +14,9 @@
 .CodeMirror pre {
   padding: 0 4px; /* Horizontal padding of content */
 }
-
+.CodeMirror pre > code {
+  padding: 0;     /* Remove any padding */
+}
 .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
   background-color: white; /* The little square between H and V scrollbars */
 }
@@ -220,7 +222,8 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   cursor: text;
   min-height: 1px; /* prevents collapsing before first draw */
 }
-.CodeMirror pre {
+.CodeMirror pre,
+.CodeMirror pre > code {
   /* Reset some styles that the rest of the page might have set */
   -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
   border-width: 0;
@@ -236,7 +239,8 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   position: relative;
   overflow: visible;
 }
-.CodeMirror-wrap pre {
+.CodeMirror-wrap pre,
+.CodeMirror-wrap pre > code {
   word-wrap: break-word;
   white-space: pre-wrap;
   word-break: normal;

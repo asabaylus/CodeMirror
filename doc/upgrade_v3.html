@@ -100,7 +100,7 @@ only behavior).</p>
   // Add a note to line 0
   cm.setGutterMarker(0, "note-gutter", document.createTextNode("hi"));
 &lt;/script>
-</pre>
+</code></pre>
 </section>
 <section id=events>
   <h2>Event handling</h2>
@@ -117,11 +117,11 @@ full list here</a>.</p>
 which act more as hooks than as event handlers, are still there in
 their old form.)</p>
 
-<pre data-lang="javascript">
+<pre data-lang="javascript"><code>
 cm.on("change", function(cm, change) {
   console.log("something changed! (" + change.origin + ")");
 });
-</pre>
+</code></pre>
 </section>
 <section id=marktext>
   <h2>markText method arguments</h2>
@@ -132,14 +132,14 @@ atomic and read-only spans, or replacing spans with widgets) no longer
 takes the CSS class name as a separate argument, but makes it an
 optional field in the options object instead.</p>
 
-<pre data-lang="javascript">
+<pre data-lang="javascript"><code>
 // Style first ten lines, and forbid the cursor from entering them
 cm.markText({line: 0, ch: 0}, {line: 10, ch: 0}, {
   className: "magic-text",
   inclusiveLeft: true,
   atomic: true
 });
-</pre>
+</code></pre>
 </section>
 <section id=folding>
   <h2>Line folding</h2>
@@ -151,7 +151,7 @@ now be used to do the same in a more flexible and powerful way.</p>
 <p>The <a href="../demo/folding.html">folding script</a> has been
 updated to use the new interface, and should now be more robust.</p>
 
-<pre data-lang="javascript">
+<pre data-lang="javascript"><code>
 // Fold a range, replacing it with the text "??"
 var range = cm.markText({line: 4, ch: 2}, {line: 8, ch: 1}, {
   replacedWith: document.createTextNode("??"),
@@ -162,7 +162,7 @@ var range = cm.markText({line: 4, ch: 2}, {line: 8, ch: 1}, {
 CodeMirror.on(range, "clear", function() {
   console.log("boom");
 });
-</pre>
+</code></pre>
 </section>
 <section id=lineclass>
   <h2>Line CSS classes</h2>
@@ -172,12 +172,12 @@ by <a href="manual.html#addLineClass"><code>addLineClass</code></a>
 and <a href="manual.html#removeLineClass"><code>removeLineClass</code></a>,
 which allow more modular control over the classes attached to a line.</p>
 
-<pre data-lang="javascript">
+<pre data-lang="javascript"><code>
 var marked = cm.addLineClass(10, "background", "highlighted-line");
 setTimeout(function() {
   cm.removeLineClass(marked, "background", "highlighted-line");
 });
-</pre>
+</code></pre>
 </section>
 <section id=positions>
   <h2>Position properties</h2>

@@ -47,10 +47,10 @@ new <a href="manual.html#option_extraKeys"><code>extraKeys</code></a>
 option, which can hold an object mapping key names to functionality. A
 simple example would be:</p>
 
-<pre>  extraKeys: {
+<pre><code>  extraKeys: {
     "Ctrl-S": function(instance) { saveText(instance.getValue()); },
     "Ctrl-/": "undo"
-  }</pre>
+  }</code></pre>
 
 <p>Keys can be mapped either to functions, which will be given the
 editor instance as argument, or to strings, which are mapped through
@@ -63,7 +63,7 @@ the <code>"goLineStartSmart"</code> command, which moves the cursor to
 the first non-whitespace character on the line. You can set do this to
 make it always go to the very start instead:</p>
 
-<pre>  extraKeys: {"Home": "goLineStart"}</pre>
+<pre><code>  extraKeys: {"Home": "goLineStart"}</code></pre>
 
 <p>Similarly, <code>Enter</code> is bound
 to <code>"newlineAndIndent"</code> by default. You can bind it to
@@ -71,7 +71,7 @@ something else to get different behavior. To disable special handling
 completely and only get a newline character inserted, you can bind it
 to <code>false</code>:</p>
 
-<pre>  extraKeys: {"Enter": false}</pre>
+<pre><code>  extraKeys: {"Enter": false}</code></pre>
 
 <p>The same works for <code>Tab</code>. If you don't want CodeMirror
 to handle it, bind it to <code>false</code>. The default behaviour is

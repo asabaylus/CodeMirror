@@ -35,6 +35,8 @@
   function setPlaceholder(cm) {
     clearPlaceholder(cm);
     var elt = cm.state.placeholder = document.createElement("pre");
+    var codeElement = document.createElement('code');
+    elt.appendChild(codeElement);
     elt.style.cssText = "height: 0; overflow: visible";
     elt.className = "CodeMirror-placeholder";
     elt.appendChild(document.createTextNode(cm.getOption("placeholder")));
